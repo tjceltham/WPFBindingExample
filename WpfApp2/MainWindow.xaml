@@ -7,9 +7,10 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <StackPanel>
-        <Button> Red</Button>
-        <Button> Yellow</Button>
-        <TextBox>value in colour</TextBox>
+        <Button Click="Button_Click_2"> Red</Button>
+        <Button Click="Button_Click_1">Yellow</Button>
         <Button Click="Button_Click"> White</Button>
+        <TextBox Text ="{Binding ColourText, ElementName=b}"/>
+         
     </StackPanel>
 </Window>

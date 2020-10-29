@@ -20,29 +20,40 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
-        private Board b;
+        public Board b;
         public MainWindow()
         {
             InitializeComponent();
             b = new Board();
+            this.DataContext = this;
         }
+
+
+      
+
+      
+       
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            string r = sender.ToString();
             
-            if (r== "System.Windows.Controls.Button: White")
-            {
-                b.setColour(0);
-            }
-            if(r== "System.Windows.Controls.Button: Red")
-            {
-                b.setColour(1);
-            }
-            if (r == "System.Windows.Controls.Button: Yellow")
-            {
-                b.setColour(2);
-            }
+            b.setColour(0);
+           b.ColourText = "White";
+
+           
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            b.setColour(1);
+            b.ColourText = "Yellow";
+          //  b.setColourT("Yellow");
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+           
+            b.ColourText = "Red";
         }
     }
 }
