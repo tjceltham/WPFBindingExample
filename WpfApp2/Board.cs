@@ -1,22 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Text;
 
 namespace WpfApp2
 {
-    class Board
+    class Board : Notifier
     {
-        private int colour = 0;
-        private string colourT = "White";
-        public void setColour(int c)
-        {
-            colour = c;
-        }
+
+        private string colourT;
         
+        public Board()
+        {
+            colourT = "White";
+        }
         public string ColourText
         {
             get { return colourT; }
-            set { colourT = value; }
+            set { colourT = value;
+                OnPropertyChanged("ColourText");
+            }
         }
+
+
+        
+
     }
 }

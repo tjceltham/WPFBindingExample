@@ -20,12 +20,13 @@ namespace WpfApp2
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Board b;
+        readonly Board b;
+        
         public MainWindow()
         {
             InitializeComponent();
             b = new Board();
-            this.DataContext = this;
+            DataContext = b;
         }
 
 
@@ -37,7 +38,7 @@ namespace WpfApp2
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             
-            b.setColour(0);
+           // b.setColour(0);
            b.ColourText = "White";
 
            
@@ -45,7 +46,7 @@ namespace WpfApp2
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            b.setColour(1);
+           // b.setColour(1);
             b.ColourText = "Yellow";
           //  b.setColourT("Yellow");
         }

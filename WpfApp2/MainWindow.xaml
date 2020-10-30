@@ -10,7 +10,7 @@
         <Button Click="Button_Click_2"> Red</Button>
         <Button Click="Button_Click_1">Yellow</Button>
         <Button Click="Button_Click"> White</Button>
-        <TextBox Text ="{Binding ColourText, ElementName=b}"/>
+        <TextBox Background = "{Binding ColourText}" Text ="{Binding ColourText}"/>
          
     </StackPanel>
 </Window>
